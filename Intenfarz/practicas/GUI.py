@@ -16,7 +16,7 @@ etiqueta = tk.Label(ventana, text="Escribe tu nombre",font="Arial").pack()
 entrada = tk.Entry(ventana)
 entrada.pack()
 
-boton = tk.Button(ventana, text="Saludar", command=saludar)
+boton = tk.Button(ventana, text="Saludar", command=saludar ,font="Arial")
 boton.pack()
 
 resultado = tk.Label(ventana, text="")
@@ -34,9 +34,13 @@ combobox.current(0)
 
 etiqueta_combobox = tk.Label(ventana, text="Selecciona un color", font="Arial")
 etiqueta_combobox.pack()
+col= {
+    "rojo": "red",
+    "verde": "green",
+    "azul": "blue"
+}
 
-colores = ["rojo", "verde", "azul"]
-combobox = ttk.Combobox(ventana, values=colores)
+combobox = ttk.Combobox(ventana, values=(col.keys()))
 combobox.pack()
 combobox.current(0)
 
