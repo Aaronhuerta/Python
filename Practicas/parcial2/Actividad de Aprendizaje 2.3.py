@@ -19,6 +19,9 @@ def iniciar_viaje():
     costo_viaje = distancia * tarifa_por_km
     ganancias += costo_viaje
     print(f"El costo del viaje a {destino} es de {costo_viaje:.2f} unidades.")
+    saldo = ganancias - gastos
+    print(f"El saldo es de {saldo:.2f} unidades.")
+    
 
 def registrar_combustible():
     global gastos
@@ -27,6 +30,8 @@ def registrar_combustible():
     costo_combustible = litros * precio_por_litro
     gastos += costo_combustible
     print(f"El costo total del combustible es de {costo_combustible:.2f} unidades.")
+    saldo = ganancias - gastos
+    print(f"El saldo es de {saldo:.2f} unidades.")
 
 def finalizar_jornada():
     saldo_final = ganancias - gastos
@@ -38,15 +43,15 @@ def finalizar_jornada():
 def main():
     while True:
         opcion = menu()
-        match opcion():
+        match opcion:
             case 1:
                 iniciar_viaje()
             case 2:
-                registrar_combustible
+                registrar_combustible()
             case 3:
                 finalizar_jornada()
             case 0:
-                print("grasias por su coperacion y registro")
+                print("gracias por su coperación y registro")
                 break
             case _:
                 print("Opción incorrecta. Por favor, elige una opción válida.")
