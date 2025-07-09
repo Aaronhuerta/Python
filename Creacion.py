@@ -1,1 +1,1 @@
-#estamos ya en un entorno python 
+#recordamos om se crea un repositoroa 
